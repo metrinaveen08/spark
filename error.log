@@ -1,0 +1,9 @@
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 350
+	at xtorq.KeyListener.keyCallback(KeyListener.java:14)
+	at org.lwjgl.glfw.GLFWKeyCallbackI.callback(GLFWKeyCallbackI.java:37)
+	at org.lwjgl.system.JNI.invokeV(Native Method)
+	at org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3094)
+	at xtorq.Window.loop(Window.java:152)
+	at xtorq.Window.run(Window.java:58)
+	at com.main.Main.trueMain(Main.java:57)
+	at com.main.Main.main(Main.java:51)

@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+// Define versions for libraries
+ext {
+    lwjglVersion = "3.2.3"
+    jomlVersion = "1.9.22"
+    lwjglNatives = "natives-windows" // Change to "natives-linux" or "natives-macos" if needed
+}
+
+dependencies {
+    // For testing (replaces testCompile)
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+
+    // For local JARs in the 'libraries' folder (replaces compile)
+    implementation fileTree(include: ['*.jar'], dir: 'libraries')
+
+    // LWJGL libraries
+    implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
+
+    implementation "org.lwjgl:lwjgl"
+    implementation "org.lwjgl:lwjgl-assimp"
+    implementation "org.lwjgl:lwjgl-glfw"
+    implementation "org.lwjgl:lwjgl-nfd"
+    implementation "org.lwjgl:lwjgl-openal"
+    implementation "org.lwjgl:lwjgl-opengl"
+    implementation "org.lwjgl:lwjgl-stb"
+    runtimeOnly "org.lwjgl:lwjgl::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-assimp::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-glfw::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-nfd::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-openal::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-opengl::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-stb::$lwjglNatives"
+    implementation "org.joml:joml:${jomlVersion}"
+}
+
+application {
+    // Set your main class here
+    mainClass = 'jade.Window' // Change this if your main class is different (e.g., 'xtorq.Main')
+    // Add VM options to avoid warnings
+    applicationDefaultJvmArgs = ['--enable-native-access=ALL-UNNAMED']
+}

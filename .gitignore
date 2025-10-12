@@ -1,0 +1,8 @@
+.idea/*
+out/*
+uiPreview.svg
+tilesets.svg
+.gradle/*
+build/*
+gradle/*
+uiLayout.zip
