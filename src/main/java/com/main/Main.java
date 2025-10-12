@@ -56,7 +56,7 @@ public class Main {
             Window window = Window.getWindow();
             window.run();
         } catch (Throwable e) {
-            System.out.println("Oh no! It looks like an error has occured. Please copy the contents of error.log to https://github.com/codingminecraft/Mario/issues.");
+            System.out.println("Oh no! It looks like an error has occured.");
 
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter("error.log"));
