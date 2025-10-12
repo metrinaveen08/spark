@@ -47,7 +47,7 @@ public class Window {
     public Window() {
         this.width = Constants.SCREEN_WIDTH;
         this.height = Constants.SCREEN_HEIGHT;
-        this.title = Constants.SCREEN_TITLE;
+        this.title = "SPARK _ Mario";
         this.aspect = width / height;
     }
 
