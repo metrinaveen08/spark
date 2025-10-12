@@ -101,7 +101,7 @@ Please include:
 
 ## License
 
-Add a license file (e.g., `LICENSE`) matching the licensing you want for this project. If you haven't chosen one yet, common choices are MIT, Apache-2.0, or GPL-3.0.
+please refer to the LICENSE Files in this Repository
 
 ## Acknowledgements
 
