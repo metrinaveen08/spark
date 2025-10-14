@@ -1,9 +1,14 @@
-```markdown
 # Spark
 
 A lightweight Java-based graphics/visuals project with shader support. Spark combines a modular Java core with GLSL shaders to provide real-time visual effects and rendering experiments.
 
-> Note: This README is intentionally generic — it assumes a standard Java toolchain and common OpenGL bindings (LWJGL/JOGL). If your repository uses a specific build system or library, update the Build / Run section accordingly.
+> Note: This README is intentionally generic — it assumes a standard Java toolchain and common OpenGL bindings (LWJGL/JOGL). If your repository uses a specific build system or library, update the details below.
+
+---
+
+**[▶️ Watch Video Demo](https://your-video-link-here)**
+
+---
 
 ## Highlights
 
@@ -58,7 +63,7 @@ jar --create --file=spark.jar -C out .
 java -cp spark.jar com.yourcompany.Main
 ```
 
-If your application depends on LWJGL/JOGL, ensure native libraries are available on the JVM library path. Example for LWJGL (when using an assembled jar/shadowJar) is typically handled by the Gradle/Maven build.
+If your application depends on LWJGL/JOGL, ensure native libraries are available on the JVM library path. Example for LWJGL (when using an assembled jar/shadowJar) is typically handled by the Gradle plugin or launcher script.
 
 ## Shaders
 
@@ -110,7 +115,5 @@ please refer to the LICENSE Files in this Repository
 
 ## Contact
 
-Maintainer: @metrinaveen08
+Maintainer: @metrinaveen08  
 Repository: https://github.com/metrinaveen08/spark
-
-```
